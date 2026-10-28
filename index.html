@@ -3,26 +3,223 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Котел Гарант</title>
+<title>Котел Гарант — ремонт котлов в Перми</title>
+<link rel="icon" href="logo.png">
+<meta name="description" content="Ремонт газовых и электрических котлов в Перми. Выезд + диагностика 2 500 ₽. 52+ бренда. Гарантия 6/3 мес. +7 (950) 469-33-47">
+<link rel="canonical" href="https://kotelgarant59.online/">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f7f4ef;--card:#fff;--text:#1c1712;--muted:#5c5348;--accent:#e85b2a;--soft:rgba(232,91,42,.12);--border:rgba(46,32,18,.08);--grad:linear-gradient(135deg,#e85b2a,#ff8a4a)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:Inter,sans-serif;background:var(--bg);color:var(--text);line-height:1.6}
+.container{max-width:1100px;margin:0 auto;padding:0 20px}
+header{position:fixed;top:0;left:0;right:0;height:64px;background:rgba(255,252,247,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);z-index:100}
+.header-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:12px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--text)}
+.logo img{width:40px;height:40px;border-radius:10px;background:#fff}
+.logo-name{font-family:Manrope,sans-serif;font-weight:800;font-size:1.1rem}
+.nav{display:flex;gap:4px}
+.nav a{color:var(--muted);text-decoration:none;font-weight:600;font-size:.9rem;padding:8px 12px;border-radius:999px}
+.nav a:hover{background:var(--soft);color:var(--text)}
+.phone{display:inline-flex;align-items:center;gap:6px;background:var(--soft);color:var(--text);text-decoration:none;font-weight:700;padding:10px 16px;border-radius:999px;white-space:nowrap}
+.phone:hover{background:var(--accent);color:#fff}
+.burger{display:none;background:var(--card);border:1px solid var(--border);border-radius:10px;width:40px;height:40px;cursor:pointer}
+.hero{padding:120px 0 60px}
+.hero h1{font-family:Manrope,sans-serif;font-size:clamp(2rem,5vw,3.2rem);font-weight:800;line-height:1.15;margin-bottom:16px}
+.hero h1 span{background:var(--grad);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.hero p{color:var(--muted);font-size:1.1rem;max-width:520px;margin-bottom:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 28px;border-radius:999px;font-weight:600;text-decoration:none;border:none;cursor:pointer}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 8px 24px rgba(232,91,42,.3)}
+.btn-ghost{background:transparent;color:var(--muted);border:1px solid var(--border)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:560px;margin-top:40px}
+.stats>div{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:14px}
+.stats strong{font-family:Manrope,sans-serif;font-size:1.3rem;display:block}
+.stats span{font-size:.8rem;color:var(--muted)}
+.section{padding:70px 0}
+.section-dark{background:#efe8de}
+.section h2{font-family:Manrope,sans-serif;font-size:clamp(1.6rem,3vw,2.2rem);font-weight:800;text-align:center;margin-bottom:8px}
+.section .desc{text-align:center;color:var(--muted);margin-bottom:40px}
+.tag{display:block;text-align:center;color:var(--accent);font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.card{background:var(--card);border:1px solid var(--border);border-radius:16px;overflow:hidden;box-shadow:0 12px 32px rgba(60,36,16,.06)}
+.card img{width:100%;height:150px;object-fit:cover;display:block;background:#efe8de}
+.card-body{padding:20px}
+.card h3{font-family:Manrope,sans-serif;font-size:1.1rem;margin-bottom:6px}
+.price{font-family:Manrope,sans-serif;font-size:1.4rem;font-weight:800;color:var(--accent);margin:8px 0}
+.card p{color:var(--muted);font-size:.95rem}
+.featured{border-color:rgba(232,91,42,.3)}
+.badge{position:absolute;top:12px;right:12px;background:var(--accent);color:#fff;font-size:.7rem;font-weight:600;padding:4px 10px;border-radius:999px}
+.card{position:relative}
+.brands{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.brand{background:#fff;border:1px solid var(--border);border-radius:12px;padding:16px;text-align:center;font-weight:800;font-size:.95rem}
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:24px;text-align:center}
+.step-num{width:48px;height:48px;border:2px solid var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--accent);margin:0 auto 12px}
+.cta{background:linear-gradient(135deg,rgba(232,91,42,.15),rgba(255,159,67,.08));padding:50px 0;text-align:center}
+.cta h2{font-family:Manrope,sans-serif;font-size:1.8rem;margin-bottom:8px}
+.contacts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.contact{background:var(--card);border:1px solid var(--border);border-radius:14px;padding:20px}
+.contact a{color:var(--text);text-decoration:none;font-weight:600}
+footer{background:#efe8de;padding:40px 0 20px;border-top:1px solid var(--border);margin-top:40px}
+.footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:24px;margin-bottom:24px}
+footer a{color:var(--muted);text-decoration:none;display:block;margin-bottom:6px}
+.mobile-nav{display:none;position:fixed;left:12px;right:12px;bottom:12px;z-index:90;background:#fff;border:1px solid var(--border);border-radius:16px;box-shadow:0 12px 32px rgba(40,24,10,.15);padding:8px;grid-template-columns:repeat(4,1fr);gap:4px}
+.mobile-nav a{text-decoration:none;color:var(--text);font-size:11px;font-weight:700;display:flex;flex-direction:column;align-items:center;gap:4px;padding:10px 4px;border-radius:12px}
+.cookie{position:fixed;inset:0;z-index:300;background:rgba(28,23,18,.45);display:none;align-items:flex-end;justify-content:center;padding:16px}
+.cookie.show{display:flex}
+.cookie-box{width:100%;max-width:560px;background:#fff;border-radius:20px;padding:20px;box-shadow:0 20px 50px rgba(0,0,0,.2)}
+.cookie-box h3{font-family:Manrope,sans-serif;margin-bottom:8px}
+.cookie-box p{color:var(--muted);font-size:.9rem;margin-bottom:14px}
+.cookie-actions{display:flex;gap:8px;flex-wrap:wrap}
+@media(max-width:900px){.nav{display:none}.nav.open{display:flex;position:absolute;top:64px;left:0;right:0;background:var(--card);flex-direction:column;padding:12px;border-bottom:1px solid var(--border)}.burger{display:flex;align-items:center;justify-content:center}.footer-grid{grid-template-columns:1fr}}
+@media(max-width:700px){.stats{grid-template-columns:1fr}.stats>div{display:flex;justify-content:space-between;align-items:baseline}.mobile-nav{display:grid}.phone span{display:none}.phone{width:40px;height:40px;padding:0;justify-content:center}.cookie{padding-bottom:90px}}
+</style>
 </head>
 <body>
-<p id="msg" style="font-family:sans-serif;text-align:center;margin-top:40vh;color:#666">Загрузка…</p>
+<header><div class="container header-inner">
+<a class="logo" href="#"><img src="logo.png" alt="Котел Гарант"><span class="logo-name">Котел Гарант</span></a>
+<nav class="nav" id="nav">
+<a href="#services">Услуги</a><a href="#works">Работы</a><a href="#brands">Бренды</a><a href="#process">Как работаем</a><a href="#terms">Условия</a><a href="#contacts">Контакты</a>
+</nav>
+<div style="display:flex;gap:8px;align-items:center">
+<a class="phone" href="tel:+79504693347"><span>+7 (950) 469-33-47</span>📞</a>
+<button class="burger" id="burger" aria-label="Меню">☰</button>
+</div>
+</div></header>
+
+<section class="hero"><div class="container">
+<p style="display:inline-flex;align-items:center;gap:8px;background:var(--card);border:1px solid var(--border);border-radius:999px;padding:6px 14px;font-size:.85rem;color:var(--muted);margin-bottom:20px">● Ежедневно 10:00–22:00 · выездной сервис</p>
+<h1>Ремонт котлов<br><span>быстро и надёжно</span></h1>
+<p>Ремонт, монтаж и обслуживание газовых и электрических котлов, систем отопления и тёплого пола. Выезд в день обращения, работаем без выходных.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+<a class="btn btn-primary" href="tel:+79504693347">Вызвать мастера</a>
+<a class="btn btn-ghost" href="#services">Смотреть услуги и цены</a>
+</div>
+<div class="stats">
+<div><strong>52+</strong><span>марок котлов</span></div>
+<div><strong>2 500 ₽</strong><span>выезд + диагностика</span></div>
+<div><strong>6 / 3 мес.</strong><span>гарантия: запчасти / работы</span></div>
+</div>
+</div></section>
+
+<section class="section" id="services"><div class="container">
+<span class="tag">Услуги и цены</span>
+<h2>Наши услуги</h2>
+<p class="desc">Честные цены. Стоимость ремонта уточняется после диагностики.</p>
+<div class="grid">
+<article class="card"><img src="service_number_1.webp" alt=""><div class="card-body"><h3>Выезд + диагностика</h3><div class="price">2 500 ₽</div><p>Фиксированная сумма по г. Пермь. Мастер приезжает на дом.</p></div></article>
+<article class="card featured"><img src="service_number_3.webp" alt=""><span class="badge">Популярно</span><div class="card-body"><h3>Ремонт газовых и электрокотлов</h3><div class="price">от 2 500 ₽</div><p>Ремонт газовых и электрических котлов более 52 марок: Baxi, Protherm, Ariston, Bosch и другие.</p></div></article>
+<article class="card"><img src="service_number_2.webp" alt=""><div class="card-body"><h3>Ремонт плат управления</h3><div class="price">8 000 ₽</div><p>Восстановление плат после скачков напряжения и других неисправностей.</p></div></article>
+<article class="card"><img src="service_number_4.webp" alt=""><div class="card-body"><h3>Монтаж и установка котла</h3><div class="price">от 10 000 ₽</div><p>Установка котла под ключ. Поможем в подборе оборудования.</p></div></article>
+<article class="card"><img src="service_number_5.webp" alt=""><div class="card-body"><h3>Монтаж отопления и тёплого пола</h3><div class="price">от 50 000 ₽</div><p>Монтаж систем отопления и тёплого пола любой сложности.</p></div></article>
+<article class="card"><img src="service_number_6.webp" alt=""><div class="card-body"><h3>Сервисное обслуживание котла</h3><div class="price">5 500 ₽</div><p>Качественное обслуживание с выездом на дом, без выходных.</p></div></article>
+<article class="card"><img src="service_number_1.webp" alt=""><div class="card-body"><h3>Обслуживание и промывка системы</h3><div class="price">от 10 000 ₽</div><p>Промывка и обслуживание системы отопления с выездом на дом.</p></div></article>
+<article class="card"><img src="service_number_3.webp" alt=""><div class="card-body"><h3>Настройка автоматики</h3><div class="price">15 000 ₽</div><p>Настройка автоматики котла и отопления, а также пусконаладка котельного оборудования.</p></div></article>
+</div></div></section>
+
+<section class="section section-dark" id="works"><div class="container">
+<span class="tag">Примеры работ</span>
+<h2>Как выглядят наши выезды</h2>
+<p class="desc">Диагностика, ремонт, монтаж и обслуживание котлов в Перми.</p>
+<div class="grid">
+<div class="card"><img src="service_number_1.webp" alt=""><div class="card-body"><h3>Диагностика</h3></div></div>
+<div class="card"><img src="service_number_2.webp" alt=""><div class="card-body"><h3>Ремонт котла</h3></div></div>
+<div class="card"><img src="service_number_3.webp" alt=""><div class="card-body"><h3>Ремонт платы</h3></div></div>
+<div class="card"><img src="service_number_4.webp" alt=""><div class="card-body"><h3>Монтаж</h3></div></div>
+<div class="card"><img src="service_number_5.webp" alt=""><div class="card-body"><h3>Отопление</h3></div></div>
+<div class="card"><img src="service_number_6.webp" alt=""><div class="card-body"><h3>Обслуживание</h3></div></div>
+</div></div></section>
+
+<section class="section" id="brands"><div class="container">
+<span class="tag">Бренды</span>
+<h2>Авторизованный сервис 30+ брендов</h2>
+<p class="desc">Ремонтируем 52+ марки газовых котлов. Свой склад фирменных запчастей.</p>
+<div class="brands">
+<div class="brand" style="color:#E30613">BAXI</div>
+<div class="brand"><span style="color:#E30613">pro</span>therm</div>
+<div class="brand" style="color:#0033A0">NAVIEN</div>
+<div class="brand" style="color:#C8102E">FERROLI</div>
+<div class="brand" style="color:#E30613">ARISTON</div>
+<div class="brand" style="color:#ED0007">BOSCH</div>
+<div class="brand" style="color:#E30613">BUDERUS</div>
+<div class="brand" style="color:#E31E24">IMMERGAS</div>
+</div>
+<p class="desc" style="margin-top:24px">Не нашли свой бренд? Позвоните — проконсультируем и поможем.</p>
+</div></section>
+
+<section class="section section-dark" id="process"><div class="container">
+<span class="tag">Процесс</span>
+<h2>Как мы работаем</h2>
+<div class="steps" style="margin-top:40px">
+<div><div class="step-num">1</div><h3>Звонок</h3><p style="color:var(--muted);font-size:.95rem">Оставляете заявку. Выезд в удобное вам время.</p></div>
+<div><div class="step-num">2</div><h3>Выезд</h3><p style="color:var(--muted);font-size:.95rem">Мастер приезжает. Диагностика по Перми — 2 500 ₽.</p></div>
+<div><div class="step-num">3</div><h3>Ремонт</h3><p style="color:var(--muted);font-size:.95rem">Работы на дому с гарантией. Обычно за один приезд.</p></div>
+<div><div class="step-num">4</div><h3>Гарантия</h3><p style="color:var(--muted);font-size:.95rem">Запчасти — 6 мес., работы — 3 мес.</p></div>
+</div></div></section>
+
+<section class="section" id="terms"><div class="container">
+<span class="tag">Условия</span>
+<h2>Часы, оплата и гарантия</h2>
+<div class="grid" style="margin-top:40px">
+<div class="card"><div class="card-body"><h3>Часы работы</h3><p>Выездной сервис: ежедневно 10:00–22:00<br>Без выходных</p></div></div>
+<div class="card"><div class="card-body"><h3>Оплата</h3><p>Стоимость ремонта — после диагностики.<br>Выезд + диагностика по Перми — 2 500 ₽.<br>Наличные и безналичный расчёт.</p></div></div>
+<div class="card"><div class="card-body"><h3>Гарантия</h3><p>Запчасти — 6 месяцев.<br>Ремонтные работы — 3 месяца.</p></div></div>
+</div></div></section>
+
+<section class="cta"><div class="container">
+<h2>Котёл не греет? Не ждите холода</h2>
+<p style="color:var(--muted);margin-bottom:20px">Позвоните — мастер выедет сегодня, с 10:00 до 22:00</p>
+<a class="btn btn-primary" href="tel:+79504693347" style="font-size:1.1rem">+7 (950) 469-33-47</a>
+</div></section>
+
+<section class="section" id="contacts"><div class="container">
+<span class="tag">Контакты</span>
+<h2>Свяжитесь с нами</h2>
+<div class="contacts" style="margin-top:40px">
+<div class="contact"><h3>Адрес</h3><p>г. Пермь, ул. Крупской, 79А<br><span style="color:var(--muted);font-size:.9rem">Мотовилихинский район</span></p></div>
+<div class="contact"><h3>Телефон</h3><p><a href="tel:+79504693347">+7 (950) 469-33-47</a></p><p style="color:var(--muted);font-size:.9rem">Выезд ежедневно 10:00–22:00</p></div>
+<div class="contact"><h3>Email</h3><p><a href="mailto:kotelgarant@gmail.com">kotelgarant@gmail.com</a></p></div>
+<div class="contact"><h3>Сайт</h3><p>kotelgarant59.online</p></div>
+</div></div></section>
+
+<footer><div class="container">
+<div class="footer-grid">
+<div><div class="logo"><img src="logo.png" alt=""><span class="logo-name">Котел Гарант</span></div><p style="color:var(--muted);margin-top:12px">Ремонт, монтаж и обслуживание котлов в Перми.</p></div>
+<div><h4 style="margin-bottom:10px">Навигация</h4><a href="#services">Услуги</a><a href="#works">Работы</a><a href="#brands">Бренды</a><a href="#contacts">Контакты</a><a href="cookies.html">Политика cookies</a></div>
+<div><h4 style="margin-bottom:10px">Связь</h4><a href="tel:+79504693347">+7 (950) 469-33-47</a><a href="mailto:kotelgarant@gmail.com">kotelgarant@gmail.com</a><p style="color:var(--muted)">ул. Крупской, 79А, Пермь</p></div>
+</div>
+<p style="color:var(--muted);font-size:.9rem;border-top:1px solid var(--border);padding-top:16px">© 2026 Котел Гарант · Пермь</p>
+</div></footer>
+
+<nav class="mobile-nav">
+<a href="#services">Услуги</a>
+<a href="#works">Работы</a>
+<a href="#terms">Условия</a>
+<a href="tel:+79504693347">Звонок</a>
+</nav>
+
+<div class="cookie" id="cookie">
+<div class="cookie-box">
+<h3>Разрешить файлы cookie?</h3>
+<p>Нужны для темы и корректной работы сайта. <a href="cookies.html">Подробнее</a>.</p>
+<div class="cookie-actions">
+<button class="btn btn-ghost" id="cookieReject" type="button">Только необходимые</button>
+<button class="btn btn-primary" id="cookieAccept" type="button">Принять все</button>
+</div>
+</div>
+</div>
+
 <script>
-(async function() {
-  try {
-    const files = ["s0.b64","s1.b64","s2.b64","s3.b64"];
-    const parts = await Promise.all(files.map(f => fetch(f+"?v=4").then(r => r.text())));
-    const b64 = parts.join("").replace(/\s/g,"");
-    const bin = Uint8Array.from(atob(b64), c => c.charCodeAt(0));
-    const ds = new DecompressionStream("gzip");
-    const stream = new Blob([bin]).stream().pipeThrough(ds);
-    const text = await new Response(stream).text();
-    document.open(); document.write(text); document.close();
-  } catch (e) {
-    document.getElementById("msg").textContent = "Обновите страницу (Chrome/Safari).";
-    console.error(e);
-  }
+(function(){
+const K='kg-cookie-consent',o=document.getElementById('cookie');
+function apply(v){localStorage.setItem(K,v);o.classList.remove('show');document.body.style.overflow=''}
+if(!localStorage.getItem(K)){o.classList.add('show');document.body.style.overflow='hidden'}
+document.getElementById('cookieAccept').onclick=function(){apply('all')};
+document.getElementById('cookieReject').onclick=function(){apply('necessary')};
 })();
+const nav=document.getElementById('nav');
+document.getElementById('burger').onclick=function(){nav.classList.toggle('open')};
+nav.querySelectorAll('a').forEach(function(a){a.onclick=function(){nav.classList.remove('open')}});
 </script>
 </body>
 </html>
